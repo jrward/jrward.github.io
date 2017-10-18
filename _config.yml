@@ -38,8 +38,8 @@ images: assets/images
 blog_assets: assets/blog
 scripts: assets/js
 
-#plugins:
-# - jekyll-feed
+plugins:
+ - jekyll-feed
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
