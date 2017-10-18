@@ -1,0 +1,106 @@
+{% extends "base.j2" %}
+{% block header %}
+Work
+{% endblock %}
+
+{% block content %}
+
+
+
+<p>
+I've had various jobs throughout my engineering career.
+
+<p>
+After finishing my Masters in New York, I moved to Colorado and worked
+briefly for Backcountry Access on a new avalanche beacon they were developing.
+Prior to grad school,I worked as an R&D hardware engineer at
+Agilent Technologies' wireless design center in Santa Rosa, 
+California. At Agilent, I helped design next generation spectrum analyzers
+for the signal analysis dviision. Agilent had a work environment different
+from most companies. Because it is a test and measurement
+company, everyone had access to really expensive equipment in their work
+areas. There is no central lab. If you needed something for your work, you 
+had it at your bench. 
+</p>
+
+<p>This was really cool because I got access to all sorts of equipment that
+most companies don't have. For example, I had a 13 GHz bandwidth scope on 
+my bench, which has a retail value of over $120,000. This was one of the best
+oscilloscopes available on the market. Before I worked there, I used
+old Tektronix scopes from the '80s. While I love working with those
+old scopes, it was nice to have access to the latest stuff. It was also
+nice because there was a lot of really neat old gear floating around.
+I had a complete system for designing and testing ultra low distortion
+audio amplifiers, but I never got around to working on one...</p>
+
+<p>Before I got my job at Agilent, I was a freelance consultant in Cleveland,
+Ohio. I did this during school and for a few months after I graduated. As
+a consultant, I got to work on some interesting projects that were primarily
+embedded software and hardware related. For my first job as a consultant,
+I was a technical advisor in a patent litigation case. I was working for the
+defense and would analyze Atmel AVR assembly source code to figure out its
+function. Apparently the lawyers didn't trust the company's engineers
+to tell them what it did. They wanted a third party. 
+</p>
+
+<p>I also worked freelance for a product design company called 
+<a href="http://www.ns-design.com/">Nottingham Spirk.</a>
+They created prototypes for outside companies and helped them get products
+into production with outsourced manufacturing centers. They mostly 
+concentrated on
+consumer products. I think their most famous product was the Crest Spin Brush.
+Their core specialty was designing slick prototypes and test marketing them
+with focus groups. The final versions were usually designed elsewhere.
+I helped them out with some
+prototype circuit work. It was interesting because they just wanted
+a prototype as fast as possible. They weren't very interestd  
+in manufacturability. All they needed were a few working prototypes.
+</p>
+
+<p>One of the craziest projects I did for them involved designing and building
+a working circuit board in less than a week. I had to use a PCB vendor that 
+offered next day delivery. I worked 36 hours straight on the board design
+and submitted it to the vendor a few hours before the next day cutoff time.
+When I woke up the next day, the board was at my house.
+</p>
+
+<p>Before my consulting days, I did a 6 month coop at Rockwell Automation 
+in their Allen Bradley PLC division. A PLC is a programmable logic controller
+and is used for industrial automation in factories. For Rockwell, I worked
+in the embedded software group responsible for the software running on their
+industrial controllers. We ran a custom OS on an ARM and a custom 
+coprocessor. The coprocessor was used to execute user
+<a href="http://en.wikipedia.org/wiki/Ladder_logic">ladder logic</a> programs.
+</p>
+<p>My projects at Rockwell focused on boot operations and test software.
+I created a boot program to configure an FPGA and worked on porting
+some open source unit test software to our embedded environment. 
+</p>
+<p>
+The craziest
+thing I did for Rockwell was to troubleshoot some legacy coprocessor test code
+written by a contractor eight years previously. The code never worked and it
+was undocumented as well! Countless spelling and syntax errors prevented
+it from assembling. I wonder if actually they paid that guy... 
+I had to slog
+though line after line of code written in a custom assembly language. The 
+online documentation for the custom chip was out of date. I found this 
+out when I discovered an undocumented opcode while sifting through the mess. 
+After
+many phone calls, I was able to get my hands on a yellowed, coffee stained 
+document that had been on some engineer's desk for years. It was probably
+the only copy in existance in the entire company.
+</p>
+
+<p>After many weeks of this, I found an interesting section of code that 
+was actually rewriting itself. It would write to memory locations used
+for program memory. It was very hard to determine what was going on. 
+At this point, 
+I was totally stumped so I sat down
+for a chat with the chief software architect. Because no one was sure
+what most of the code actually tested, they decided that they weren't
+going to use it and I no longer had to try to fix it.
+</p>
+
+
+{% endblock %}

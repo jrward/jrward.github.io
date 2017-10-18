@@ -1,0 +1,179 @@
+---
+layout: default
+title: Autonomous Soccer Robot
+---
+
+<p>In the spring of 2006, I worked with a group of three other people to 
+develop a lego robot to play soccer with other robots.
+</p>
+
+<p>We were in a class called "Mobile Robotics" with 
+<a href="http://vorlon.case.edu/~wsn">Dr. Newman.</a>
+The goal of the class was to build a fully functional soccerbot from the 
+ground up. We had weekly projects that were supposed to lead us up to
+this goal. Unfortunately, instead of each project being a small addition to
+the previous, it seemed like we had to start from scratch each week.
+</p>
+
+<p>The class was divided into five groups with different skillsets. One
+of the most interesting aspects of the class was seeing how each group solved
+each problem. The solutions were as individualized as the groups themselves.
+</p>
+
+<p>Initially, our group didn't work together well. We would meet for a bit 
+to come up with a general strategy and assign tasks and then each go home
+and work on our tasks separately. It became a nightmare to integrate our parts
+together to form a working solution. We abandonded this method during the
+second week when problems with our program prevented us from finishing a
+project. From then on, we would meet almost every day and work on everything 
+together. This proved to be the most efficient way to finish the weekly 
+project. The professor actually told us at the end of the semester that we
+had the most cooperative team. Every other group was plagued by in-fighting.
+</p>
+
+<p>
+<img class="right" src="{{site.images}}/soccerbot_fiducial_320.jpg" width="320px"
+title="Red fiducial on green carpet">
+The first half of the semester was focused on building an image processing
+system. The first project was to identify a fiducial (a red dot) placed
+on a fake grass carpet. An ethernet web camera in the ceiling looked down onto
+the carpet and gave us our only input. We were given an intel library to 
+convert the camera's jpeg images into a two dimensional array of pixel RGB 
+values. From there, we had to write the necessary code to identify the 
+center of the red dot and display its position on the carpet in feet.
+</p>
+
+<p>Subsequent image processing projects forced us to make our algorithm more 
+generalized and calculate more than just the center of a fiducial.  We had to 
+identify the positions of multiple multi-colored oddly shaped objects placed on 
+the carpet and display various properties such as the angular direction that
+the object was 
+pointing. This was calculated by figuring out the major and minor axes of each
+object by looking at how the "weight" of each object was distrubuted.
+</p>
+
+<p>
+<img class="right" src="{{site.images}}/soccerbot_cwrubert_320.jpg" width="320px"
+title="Our robot, Cwrubert (pronounced like crew bert) in his jersey">
+The second half of the class introduced us to the robotics aspect of the
+class. We built our robot out of various Lego Mindstorm components. The 
+control mechanism was very complicated. Attached to the robot was an HP iPaq
+that communicated with a Lego Minstorm CPU brick over a one-way IR link 
+attached to the iPaq's headphone jack. A Lego Minstorm CPU brick controlled
+the lego motors while iPaq had built-in WiFi access that was used to 
+communicate with a desktop computer. 
+
+<p>Every group in the class used the same interface. We needed three
+separate programs. The main one was run on the desktop computer. It would
+communicate over a client-server interface with the iPaq and give it commands.
+Another program running on the iPaq would then interpret these commands. Based 
+on the commands, different sound files would be played through the headphone 
+jack. These sounds were created to generate special IR sequences with the IR 
+link. Yet another program running on the Lego CPU brick would use these IR 
+sequences to send appropriate commands to control the motors. 
+</p>
+
+<p>Debugging this convoluted control mechanism was just as scary as it sounds.
+</p>
+
+<p>Our first robotic project had us making a program to manually steer our
+robot over WiFi. Autonomy would come later. 
+</p>
+
+<p>Making our robot operate autonomously was a great thrill. Each group's 
+algorithms were always wildly different, but this task lead to the greatest 
+divergence.
+</p>
+
+<p>To control the motion of our robot, we used a PID loop to minimize the error
+angle between the direction our robot was pointing and its target waypoint.
+The robot would move towards its waypoint while minimizing the error angle. By
+creating appropriate waypoints leading up to our destination, we could make
+the robot follow any path. One of our labs actually had us figure out the
+best path through a maze and then have our robot navigate the maze.
+</p>
+
+
+<p>
+<img class="right" src="{{site.images}}/soccerbot_onboard_320.jpg" width="320px"
+title="Onboard image taken with the iPaq camera">
+We were the only group to use a PID loop for our robot. I think it provided
+the best compromise between speed and accuracy of positioning. 
+To determine the appropriate proportional, integral, and derivative terms,
+I created a special program to make the robot run in a square. 
+We would adjust the terms based on how the robot traveled through the abrupt turns. 
+This square
+method proved to be a great method to use. The large 90 degree turns allowed
+us to tune all the overshoot out of the system and obtain a slightly 
+overdamped response, which is desirable for smooth motion.
+</p>
+
+<p>
+
+The greatest weakness of this method was that the web cam's response time
+would slow down immensely when other groups were requesting images from it.
+This plagued us for awhile because when we were developing our system,
+it was usually very late at night (or early in the morning, depending on your 
+perspective) and we were the only group working. By having an upredictable
+update rate, our PID loop would lose its perfect behavior in the presence
+of other robots. We evenutally solved this problem by slowing our loop down to
+the worst expected performance of the web cam.
+</p>
+
+<p>
+
+<img class="right" src="{{site.images}}/soccerbot_onboard_filtered_320.jpg"
+width="320px" title="Onboard image, post processing">
+Prof. Newman through us a curveball one week when he handed out cameras 
+designed to fit in the iPaq's expansion slot. He wanted us to make our robots
+follow a line of tape based only on input from the iPaq camera. The robot
+would transfer an image back to the desktop for processing. The desktop would
+then reply with appropriate instructions. In effect, this turned our robots
+into miniature Mars rovers.
+</p>
+
+<p>To solve this challenge, we came up with an innovative solution. Instead
+of drastically modifying our program to introduce some complex new processing
+method, we created a whole new algorithm that looked at just six pixels to
+determine how to steer the robot. In effect, we turned our robot into one
+of those kit line follower robots that uses LEDs and photodiodes to maintain 
+position over line. We were able to finish this modification in just a few
+hours of work and we became the fastest line follower in the class. I think
+the professor was a little disappointed that we used such a simple method.
+</p>
+
+<p>For our final challenge, we played soccer with the other robots in the
+class. One group was having severe problems, so that left just four robots for 
+the tournament. We played round robin 1v1 matches and even played each other
+2v2. The 2v2 matches were challenging. Because adding inter-robot communication
+would have added several orders of magnitude of complexity, the class settled
+on having two behaviors for each robot - offensive and defensive. When playing
+2v2, we decided ahead of time with our teammates which behavior our robot would
+adopt. Each group implemented its own version of offensive or defensive 
+behavior.
+</p>
+
+<div align="center"><img src="{{site.images}}/many_blue_robots.jpg" width="640px" height="480px" alt="Bird's
+eye view of all the robots on the soccer field" title="Bird's eye view of all
+the robots on the soccer field"></div>
+
+<p>For defense, our robot would hang out near our team's goal and move parallel
+with it like in pong to block the incoming ball. For offense, we would draw
+an imaginary line from the center of the opponent's goal through the ball.
+A waypoint for our robot would be set at the end of this line. Once our robot
+reached that point, another waypoint would be set at the center of their goal.
+Although very simple, this method proved to be a very good way of scoring
+goals. When playing 1v1, we chose to adopt only the offensive behavior
+because it still allowed us to block shots by moving into the path of the ball.
+</p>
+
+<p>Here is a two minute video showing some parts of the final match. The 
+frames were
+generated from the debugging output of our image processing algorithm. 
+This is actually what our program saw in operation. I decided not to edit 
+out some of the setup scenes because I thought our processing algorithm gave
+people a cool rotoscoping effect.
+</p>
+
+<div align="center"><object width="425" height="350"> <param name="movie" value="http://www.youtube.com/v/dI986ub2dIs"> </param> <embed src="http://www.youtube.com/v/dI986ub2dIs" type="application/x-shockwave-flash" width="425" height="350"> </embed> </object></div>
+

@@ -1,0 +1,149 @@
+{% extends "base.j2" %}
+{% block header %}
+College
+{% endblock %}
+
+{% block content %}
+
+
+        <div align="center">
+            <img src="{{images}}/cleveland_sky_640.jpg" width="640px" height="480px" 
+            alt="picture of a Cleveland sunset taken from the north side dorms of Case
+            Western Reserve University" title="A picture of a Cleveland sunset taken
+            from the north side dorms of Case Western Reserve University">
+        </div>
+
+        <p>I graduated in January, 2007 with a Bachelor of Science in Electrical
+        Engineering from Case Western Reserve University.</p>
+
+        <p>I really enjoyed going to Case. There are a lot of problems there that could be
+        fixed, but in the end, my experiences there are very close to my heart. Case
+        has such a tight-knit community that I couldn't see myself going to another
+        college for undergrad. I think the tight-knit community is just one of the benefits of 
+        going to a smallish private engineering school in a decaying city. </p>
+
+        <p>Ever since I took my first programming class, I knew what I wanted to do. I
+        wanted to be an engineer. Being in FIRST Robotics (Team 63) helped a great deal
+        as well. Getting the exposure to smart GE engineers served to cement my
+        goal.</p>
+
+        <p>I actually started out as a computer engineering major. In high school,
+        programming was a thrill that created an interest in computer science. I chose
+        computer engineering because I was interested in hardware as well. My cousin (a
+        fellow Case grad and a computer engineer) gave me an <a
+            href="atmel.com">Atmel</a> AVR development kit to give me a taste. Programming
+        in assembly and seeing LEDs light up and respond to button presses was a thrill
+        beyond what any PC-based program could produce. Working down at a low level
+        was like a drug. Sure, you can do much more at a higher level, but at
+        a low level, you can interface to hardware, a tangible physical entity.</p>
+
+        <p>Instead of sticking with Computer Engineering, I declared as an
+        Electrical Engineering at the end of freshman
+        year. There were a few reasons for this. Foremost, the computer engineering
+        department seemed poorly put together. In contrast, the EE faculty and research
+        areas were much more exciting.</p>
+
+        <p>I had always been interested in electronics as a child, but never had a deep
+        understanding of how things worked. There seemed to be some sort of black magic
+        going on that I couldn't quite figure out. Given that, it was my fascination
+        and insatiable thirst for ciruit knowledge that drove me to concentrating in
+        analog circuits. I actually took every analog circuit class that my school
+        offered except for one grad class that was taught on alternating years. </p>
+
+        <p>The best classes that I took were:</p>
+        <ul>
+            <li>EECS 396L: Applied Circuit Design with Larry Sears
+            <p>In this class, there were no tests or quizes. The class met
+            only once a week. The rest of the time, we (my partner Steve Majerus and I) had
+            to design, prototype, and test various analog circuits. We were basically only
+            allowed to use discrete transistors, opamps, and 555 timers to complete all of
+            the projects. We received one project every week during class. Larry would give
+            some practical design advice and then run through next week's project. Prior to
+            class, we had to demonstrate last week's project. Because we had to design the
+            circuts to rigid specs, we had to show him our measured performance results and
+            do a live demo. </p>
+
+            <p>Larry was a great teacher because even if you met all the
+            specs, he would tear your circuit apart and tell you how you could do it
+            better. This instant feedback was great because I got to see better ways to
+            design circuits.</p>
+
+            <p>The notable projects completed during that class were: 
+            <ul>
+                <li>A <a href="http://en.wikipedia.org/wiki/Light_organ">light
+                    organ.</a> 
+                <p>The project was to modulate two 12V lamps to follow along with music.
+                This was the first major project of the course. The only active components we
+                could use were discrete BJTs. We made a discrete transistor amplifer and split
+                the incoming music into two frequency bands. We then used these bands along
+                with a peak detector (with decay) and an output stage to modulate the
+                lamps.</p>
+                </li>
+                <li>Linear and switching power supplys from discrete components.
+                <p>No switch mode controllers were used. For the linear power supplies, we used a
+                beefy pass transistor and various means of regulating the output voltage. The
+                simplest one used just a zener as a reference with some more BJTs to
+                control the pass transistor. The complex supply required output current
+                limiting and foldback. For the switching power supply, we made a buck converter
+                using a FET, an inductor, and a diode. We used drove the FET with PWM to
+                regulate the output voltage.</p>
+                </li>
+                <li>A DC motor controller with light gate speed feedback.
+                <p>This project was similar to the switch mode power supply. We dove the motor
+                using PWM to regulate the speed. This was accomplished by converting the
+                light gate speed information into a voltage and using the voltage in the
+                feedback loop.</p>
+                </li>
+                <li>An infrared datalink. 
+                <p>In this project, we took an incoming
+                analog signal and transmitted it over an infrared link to a receiver, where it
+                was reconstructed. This was done without any DACs or ADCs or any digital
+                components at all. We used single slope integration to read in the voltage
+                level from a sample and hold circuit that we made. The voltage information
+                (really time information at this point) was then converted to PWM for the data
+                transmission. The PWM signal was then reconstructed into an analog waveform.</p>
+                </li>
+            </ul>
+            <p>Larry was a Case alum who founded a successful circuit design
+            company. After I took the class, he donated a substantial amount of money to
+            renovate the circuits lab.</p>
+
+
+            </li>
+            <li>EBME 418: Electronics for BMEs (Stmulation and Measurement with Dr.
+            Durand
+            <p>It was in this graduate-level class that everything "came
+            together." This class put in perspective all of the circuit knowledge that I
+            acrued throughout my entire education. It was especially helpful taking this
+            class after Applied Circuit Design.</p>
+            <p>This class showed me many different circuits with
+            applications to nerve stimulation and signal measurement. My hand-on experience
+            gained in Applied Circuit Design really gave me a much deeper appreciation for
+            the material covered.</p>
+            <p>It was also in this class that I completed my Ultra Wide
+            Band EKG transmitter/receiver project</p>
+
+            </li>
+            <li>EECS 426: CMOS Mixed-Signal Integrated Circuit Design with Dr.
+            Garverick
+            <p>This graduate-level class was great because I got to learn
+            how to perform analog IC design and layout. I took this class concurrently with
+            Applied Circuit Design. It was such a totally different class that it seemed to
+            require a different mindset. This class focused mostly on simulation and
+            homework whereas the other was almost purely hands-on work.</p>
+            <p>For this class, I designed, layed out, and
+            tested the performance of two different circuits. The first project was a
+            <a href="http://en.wikipedia.org/wiki/Schmitt_trigger">Schmitt trigger</a> and
+            the second was an operational amplifier suitable for driving on-chip loads.
+            </p>
+            <p>The opamp was by far the more challenging project. It
+            had rigorous specs that were very hard to meet. They were designed in such a way
+            that if you met a few pretty well, you would be terrible on a few others.
+            Meeting them all required a lot of tweaking. To finish this project on time, I
+            ended up working 36 hours straight. Most of that time was spent chasing down one
+            spec that kept slipping away. I would tweak my circuit to hit a spec and end up
+            hurting my performance on a different one. </p>		
+            </li>
+        </ul>
+
+{% endblock %}

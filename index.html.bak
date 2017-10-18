@@ -1,0 +1,117 @@
+---
+layout: default
+---
+
+  <div  class="image_top_right" >
+            <img  src="{{ site.images }}/jon_mugshot.jpg" width="320px" height="360px" alt="A picture of me" title="A picture of me">
+        </div>
+
+        <ul>
+            <li><a href="breakout.html">FPGA Breakout Game</a>
+            <p>
+            I created a breakout game on an Altera Cyclone IV FPGA using Verilog.
+            </p>
+            </li>
+            
+            <li><a href="soccerbot.html">Autonomous Soccer Robot</a>
+            <p>
+            I helped created an autonomous soccer playing robot as
+            part of a Mobile Robotics class. A computer downloaded
+            images from an overhead webcam, processed them,
+            and sent instructions to the robot over WiFi.
+            </p>
+            </li>
+            <li><a href="uwb_ekg.html">Ultra Wide Band EKG Transmitter/Receiver</a>
+            <p>
+            I made an ultra wideband transmitter and receiver to transmit EKG
+            data from a patient and output it to a heart monitor. This was 
+            a very intensive project that involved building a radio from the
+            ground up.
+            </p>
+            </li>
+            <li><a href="lna.html">Low Noise VHF Amplifier</a>
+            <p>
+            I made a low noise amplifier for MRI applications to amplify
+            signals at 64 MHz.
+            </p>
+            </li>
+            <li>Motor Driven Mountain Bike Conversion
+            <p>
+            Presented with an old rusty mountain bike and some power wheelchair
+            motors, I decided to make an electric mountain bike. This was my
+            first TIG welding project. I welded a bike sprocket onto a hub for
+            attachment to the motor shaft. The welds turned out okay, but the 
+            sprocket got pretty warped. You have to watch the temperature...
+            </p>
+            <p>
+            I did most of the motor drive circuitry and the necessary machining.
+            I shelved the project when I blew some catch diodes during testing.
+            Another Case Project Club member finished everything after I graduated.
+            </p>
+            </li>
+            <li>Golf Cart Instrumentation and Display System
+            <p>
+            This was my first senior project. I designed some hardware to
+            provide diagnostics on an alumnnus' home-made golf cart. My friend
+            Chris did the embedded software work for the board and Aaron and
+            a different Chris worked on integrating a motor controller with
+            regenerative braking. The diagnostic system was able to measure
+            speed, distance traveled, game time, battery voltage, drive current,
+            and instantaneous power.
+            </p>
+            </li>
+            <li><a href="baja.html">Mini-Baja Speedometer/Odometer</a>
+            <p>This was the first embedded project I did by myself. It also
+            was the first circuit board that I designed. The board displayed 
+            speed and distance information to the LCD display of an off-road
+            race car. I enjoyed helping to build the car as well.
+            </p>
+            </li>
+            <li><a href="http://kundor.org/Pool/">Pool!</a>
+            <p>During my freshman year, this was my group's final project for 
+            our advanced C++ class. It was a pretty big leap from console
+            to GUI applications. I spent all of Thanksgiving break pounding 
+            out windows code. Nick worked on the graphics engine, Anatoly
+            did the physics, and Travis did some algorithm work for the AI.
+            </p>
+            </li>
+            <li><a href="guitar.html">Solid-Body Electric Guitar</a>
+            <p>Dreaming of having an electric guitar, but not being able to
+            afford one, I decided to build my own. If you just count materials
+            cost, it was cheaper, but if you factor in labor... 
+            </p>
+            <p>
+            It was all worth it in the end.
+            </p>
+            </li>
+            <li>Spokeshave	
+            <p>A spokeshave is a woodworking tool that is like a cross between
+            a plane and a drawknife. It was used to make wagon spokes in 
+            days past. I used my forge to harden some O-1 steel for the blade
+            and carved the handle body from maple. Instead of carving spokes,
+            I used this to carve my guitar neck.
+            </p>
+            </li>
+
+            <li><a href="forge.html">Various Forges</a>
+            <p>I made several forges for heat-treating, blacksmithing, and melting
+            aluminium.      
+            </p>
+            </li>
+            <li><a href="college.html">College</a>
+            <p>I went to college at Case Western Reserve University and graduated with 
+            a B.S. in electrical engineering in January of 2007.
+            </p>
+            </li>
+            <li><a href="grad_school.html">Grad School</a>
+            <p>I got my M.S. in electrical engineering from Columbia University in May
+            of 2010.
+            </p>
+            </li>
+            <li><a href="work.html">Work</a>
+            <p>I've worked as an engineer in various capactities. This describes a few
+            of them.
+            </p>
+            </li>
+        </ul>
+

@@ -1,0 +1,64 @@
+{% extends "base.j2" %}
+{% block header %}
+Grad School
+{% endblock %}
+
+{% block content %}
+
+	
+
+<p>I graduated in May of 2010 with a Master of Science degree in Electrical
+Engineering from Columbia University.</p>
+
+<p>
+I had an interesting time at Columbia. Moving from California to New York City 
+was an immense change. I went from living amongst the rolling hills and 
+vineyards of Sonoma County to the concrete jungle of West Harlem. Perhaps the 
+most difficult adjustment was getting used to garbage and litter strewn about 
+everywhere. 
+</p>
+
+<p>The best classes that I took were:</p>
+<ul>
+<li>Genomic Sequencing Lecture and Lab with Dr. Ju.
+        <p>This was an interesting set of classes in the chemical engineering 
+        department. The first class was a lecture series about all the 
+        different sequencing techniques and technologies. In the second class, 
+        I got to work in a genetics lab and perform research involving genetic
+        sequencing</p> 
+	<ul>
+            <li><a href="{{docs}}/genetic_midterm_report.pdf">Midterm report</a> 
+            about my efforts to search for blood-born bacteria in heart arteries 
+            using genetic sequencing techniques. </li>
+            <li> <a href="{{docs}}/genetic_final_report.pdf">Final report</a> about 
+            various techniques to detect single nucleotide polymorphisms (SNPs).</li>
+        </ul>
+</li>
+<li><a href="http://www.ee.columbia.edu/~dpwe/e4896/">Music Signal Processing with 
+    Dr. Ellis</a>
+        <p>This was a very interesting class that taught various DSP techniques to 
+        analyze and synthesize sound.</p>
+        <ul>
+            <li> <a href="{{docs}}/vocoder.pdf">Voder presentation</a> that I gave 
+            during the first few weeks of class.</li>
+            <li> A paper on <a href="{{docs}}/piano_roll.pdf">note recognition</a> and 
+            a Java/Processing program I made to recognize and display the notes in 
+            a piece of classical music.</li>
+            <li> A paper on <a href="{{docs}}/singing_synth.pdf">singing synthesis</a> 
+            and a Pure Data patch used to synthesize an opera voice.</li>
+            <li> <a href="{{docs}}/vocoder_final.pdf">Final project report</a> on a 
+            vocoder patch I made in Pure Data.</li>
+
+        </ul>
+</li>
+<li>Modern Dislay Science and Technology
+<p>This was a cool class taught by Prof. Kymissis. In it we learned about pretty much every major display 
+technology and how our brains and eyes work to provide vision. We also worked in a lab 
+to build several displays using utilizing various technologies. We built a dot matrix 
+OLED and LCD display from scratch and drove them using an Arduino. We also made 
+electroluminescent displays and even built a Nixie tube clock.</p>
+
+</li>
+</ul>
+
+{% endblock %}

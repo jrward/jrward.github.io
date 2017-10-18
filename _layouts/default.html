@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title}}{% endif %}</title>
+    <link rel="stylesheet" type="text/css"
+        href="{{ "/assets/css/mystyle.css" | relative_url }}">
+</head>
+
+<body>
+    <div id="main">
+    <div id="inner">
+    <div id="title">
+    <h1>Jonathan Ward</h1>
+    </div>
+
+    <div id="nav">
+    <a class="nav" href={{site.baseurl}}/index.html>projects</a> |
+	<a class="nav" href={{site.baseurl}}/blog.html>blog</a> |
+    <a class="nav" href={{site.docs}}/JonathanWardResume.pdf>resume</a>
+    </div>
+
+    {{ content }}
+
+	<div id="footer">
+    &copy 2017 Jonathan Ward
+    </div>
+    </div>
+            
+    </div>
+
+ </body>
+</html>

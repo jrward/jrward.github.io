@@ -1,0 +1,172 @@
+/** {margin:0; padding:0;}*/
+
+body
+{
+	background-color: #414141;
+	text-align: center;
+	min-width: 800px;
+}
+
+a:link {color: #d00000; text-decoration:none}
+a:visited {color: #d00000; text-decoration:none}
+a:hover {text-decoration: underline}
+
+h1{ font-size:32px;}
+
+
+#main 
+{ 
+	margin: -15px auto auto auto;
+	/*margin-top: -15px;*/
+	background-color: white;
+	background: #FFFFFF url(/media/images/right_fade.gif) repeat-y right;	
+	width: 800px;
+	height: auto;
+	text-align: left;
+	font-family: arial, sans-serif, Verdana ;
+	font-size: 16px;
+}
+#title
+{
+	padding-top:10px;
+	text-align: Center;
+	background-color:#FFFFFF;
+}
+
+#title h1
+{
+    margin: 15px 0px 5px 0px;
+}
+
+    
+.redtext {color:#d00000;}
+
+#nav
+{	
+	margin: 5px auto 25px auto;
+	padding: 5px 13px 5px 13px;
+	text-align:center;
+	font-weight: bold;
+	background-color:#FFFFFF;
+}
+
+#footer
+{
+	/*width:740px;*/
+	margin: 2em auto 3em 1px;
+	font-weight:bold;
+	background-color:#FFFFFF;
+}
+
+a.current:link{ background-color:#a0a0a0; color:#d0000000; text-decoration:none}
+a.current:visited{background-color:#a0a0a0; color:#d00000; text-decoration:none}
+a.current:hover {background-color:#a0a0a0; color:#d00000;text-decoration:underline}
+a.nav:link {color:#d00000; text-decoration:none}
+a.nav:visited {color: #d00000; text-decoration:none}
+a.nav:hover {text-decoration: underline}
+
+
+#test
+{
+	width: 766px;
+	height: 10px;
+	margin: 0 auto;
+	background-color: black;
+
+}
+
+#inner
+{
+	padding: 10px 49px 15px 55px;
+	/*height: 1000px;*/
+}
+
+
+.post
+{
+	width: 720;
+	margin: 15px auto;
+	border-style:dashed;
+	border-width: 3px;
+	padding: 10px 10px 10px 10px;
+	font-weight:bold;
+	background-color: #eaeaea;
+}
+
+p.date
+{
+	font-style: italic;
+	font-weight: bold;
+	line-height: 0px;
+	color: gray;
+}
+
+.image_right
+{
+	float:right;
+	clear:both;
+	margin: 10px 5px 10px 30px;
+}
+
+.image_left
+{
+	float:left;
+	clear:both;
+	margin: 15px 15px 5px 15px;
+}
+
+.image_top_left
+{
+	float:left;
+	clear:both;
+	margin: 0px 30px 10px 0px;
+
+}
+
+.image_top_right
+{
+        float:right;
+        clear:both;
+        margin: 0px 5px 10px 30px;
+}
+
+
+img.right{float: right; margin: 15px 0 15px 10px;}
+img.bot{vertical-align:text-bottom; }
+img.mid{vertical-align:middle;}
+
+p
+{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0em;
+    margin-right: 0em;
+}
+
+ul
+{
+	list-style-image: url("/media/images/triangle.gif");
+	font-weight: bold;
+        padding-left: 0px;
+        margin-left: 15px;
+}
+
+li
+{
+    margin-left: 0em;
+    margin-top: 1em;
+}
+
+li p
+{
+        margin: 0em 0em 1em -14px;
+        position:relative;
+        font-weight: normal;
+}
+
+li li
+{
+    margin-top: 0em;
+}
+    
+

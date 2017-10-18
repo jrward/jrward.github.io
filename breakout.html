@@ -1,0 +1,31 @@
+---
+layout: default
+title: FPGA Breakout Game
+
+---
+<p>
+Most of my FPGA designs have been for industrial purposes, such as processing
+signals and controling hardware. I haven't really used an FPGA in a truly interactive way.
+I got the idea to create a video game on an FPGA right before a long business trip to China.
+I knew I would be spending long hours on an airplane and in a Chinese factory and needed 
+something more productive that watching TV in my hotel room when I wasn't in the factory.
+</p>
+<p>
+<a href='https://github.com/jrward/qdbreakout'>You can see the code on Github.</a> Look in the
+rtl folder to see my Verilog code. I am directly driving the 5 VGA pins (RGB, Vsync, Hsync)
+with digital outputs on the Cyclone IV FPGA. A reistive divider is used to lower the 3.3 V
+outputs to the appropriate VGA voltage levels for the red, green, and blue channels. The
+digital Vsync and Hsync control signals which are spec'ed at 5 V work just fine at 3.3 V.
+Player position is controled by a mechanical encoder driving two digital inputs with internal
+pullup resistors.
+</p>
+
+<p>Here is a short video of my game in action:
+</p>
+
+<div align="center">
+    <iframe width="560" height="315" src="//www.youtube.com/embed/tHy_PMqZQDY" frameborder="0" allowfullscreen>
+    </iframe>
+</div>
+
+
